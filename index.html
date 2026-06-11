@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Assistant Market | Pusat Layanan AI & Aplikasi Premium</title>
+  <!-- Menggunakan Tailwind CSS CDN agar langsung siap pakai tanpa install -->
+  <script src="https://tailwindcss.com"></script>
+  <style>
+    @import url('https://googleapis.com');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
+
+  <!-- NAVBAR / HEADER -->
+  <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="text-center sm:text-left">
+        <h1 class="text-2xl font-black text-blue-900 tracking-tight">E-ASSISTANT MARKET</h1>
+        <p class="text-xs text-blue-600 font-medium tracking-wide">Your One-Stop Digital & AI Assistant Hub</p>
+      </div>
+      <div class="flex items-center gap-2 bg-green-50 text-green-700 text-xs font-bold px-3 py-1.5 rounded-full border border-green-200">
+        <span>🟢</span> Semua Produk Bergaransi Full & Otomatis Rp0 Ongkir
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="max-w-6xl mx-auto px-4 pt-8 w-full">
+    <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-800 text-white rounded-3xl p-6 sm:p-10 shadow-xl text-center relative overflow-hidden">
+      <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+      <span class="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Promo Terbatas Mingguan</span>
+      <h2 class="text-2xl sm:text-4xl font-extrabold mb-2 tracking-tight">Upgrade Produktivitas Kerja & Belajar</h2>
+      <p class="text-blue-200 text-sm sm:text-base max-w-xl mx-auto mb-0">Dapatkan akses akun premium legal dan aman. Transaksi 100% aman via e-commerce favoritmu dengan jaminan ongkos kirim Rp0 tanpa ribet klaim voucher.</p>
+    </div>
+  </section>
+
+  <!-- UTAMA: KATALOG ETALASE -->
+  <main class="max-w-6xl mx-auto px-4 py-10 w-full flex-grow">
+    
+    <!-- GRID KARTU PRODUK -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- KARTU 1: CHATGPT PREMIUM -->
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 overflow-hidden flex flex-col">
+        <div class="p-6 flex-grow">
+          <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">AI Assistant</span>
+          <h3 class="text-xl font-bold text-gray-800 mt-3 mb-2">ChatGPT Premium (Plus)</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Akses model tercanggih, respons super cepat, tanpa batas waktu, dan fitur analisis data eksklusif.</p>
+          
+          <!-- Pilihan Variasi Akun -->
+          <div class="space-y-2 mb-6">
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400">Pilih Tipe Akses:</label>
+            
+            <label class="border border-gray-200 hover:border-orange-500 rounded-xl p-3 flex items-center justify-between cursor-pointer transition">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="varian_chatgpt" checked class="w-4 h-4 text-orange-500 accent-orange-500"
+                       onclick="ubahLink('btn-chatgpt', 'https://shope.ee', 'https://tokopedia.link', 'https://lazada.co.id')">
+                <div>
+                  <span class="block font-bold text-sm text-gray-800">Sharing Account</span>
+                  <span class="block text-xs text-gray-400">Gunakan bersama, hemat budget</span>
+                </div>
+              </div>
+              <span class="font-extrabold text-blue-900 text-sm">Rp110.000</span>
+            </label>
+
+            <label class="border border-gray-200 hover:border-orange-500 rounded-xl p-3 flex items-center justify-between cursor-pointer transition">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="varian_chatgpt" class="w-4 h-4 text-orange-500 accent-orange-500"
+                       onclick="ubahLink('btn-chatgpt', 'https://shope.ee', 'https://tokopedia.link', 'https://lazada.co.id')">
+                <div>
+                  <span class="block font-bold text-sm text-gray-800">Private Account</span>
+                  <span class="block text-xs text-gray-400">Email pribadi, bebas kuota</span>
+                </div>
+              </div>
+              <span class="font-extrabold text-blue-900 text-sm">Rp360.000</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Tombol Beli / Checkout Multi-Platform -->
+        <div class="p-6 bg-gray-50 border-t border-gray-100 rounded-b-2xl">
+          <div class="flex flex-col gap-3" id="btn-chatgpt">
+            <div class="relative group">
+              <span class="absolute -top-2 -right-2 z-10 bg-cyan-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded shadow flex items-center gap-0.5 animate-pulse">🚚 OTOMATIS Rp0 ONG KIRS</span>
+              <a href="https://shope.ee" target="_blank" class="platform-shopee w-full flex items-center justify-between bg-[#EE4D2D] hover:bg-[#f05d3e] text-white font-bold py-3 px-4 rounded-xl text-sm transition shadow-sm">
+                <span>Beli via Shopee</span> <span class="opacity-80">➔</span>
+              </a>
+            </div>
+            <div class="relative">
+              <span class="absolute -top-2 -right-2 z-10 bg-green-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded shadow flex items-center gap-0.5">🟢 Rp0 ONGKIR</span>
+              <a href="https://tokopedia.link" target="_blank" class="platform-tokped w-full flex items-center justify-between bg-[#42B549] hover:bg-[#4fca57] text-white font-bold py-3 px-4 rounded-xl text-sm transition shadow-sm">
+                <span>Beli via Tokopedia</span> <span class="opacity-80">➔</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KARTU 2: CANVA PRO -->
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition duration-300 overflow-hidden flex flex-col">
+        <div class="p-6 flex-grow">
+          <span class="bg-purple-100 text-purple-800 text-xs font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">Design Tool</span>
+          <h3 class="text-xl font-bold text-gray-800 mt-3 mb-2">Canva Pro & Teams</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Akses jutaan template premium, hapus latar belakang foto instan, dan aset elemen eksklusif siap pakai.</p>
+          
+          <div class="space-y-2 mb-6">
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-400">Pilih Durasi:</label>
+            
+            <label class="border border-gray-200 hover:border-orange-500 rounded-xl p-3 flex items-center justify-between cursor-pointer transition">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="varian_canva" checked class="w-4 h-4 text-orange-500 accent-orange-500"
+                       onclick="ubahLink('btn-canva', 'https://shope.ee', 'https://tokopedia.link', '')">
+                <div>
+                  <span class="block font-bold text-sm text-gray-800">Akses 1 Bulan Full</span>
+                  <span class="block text-xs text-gray-400">Sistem invite team resmi legal</span>
+                </div>
+              </div>
+              <span class="font-extrabold text-blue-900 text-sm">Rp15.000</span>
+            </label>
+
+            <label class="border border-gray-200 hover:border-orange-500 rounded-xl p-3 flex items-center justify-between cursor-pointer transition">
+              <div class="flex items-center gap-3">
+                <input type="radio" name="varian_canva" class="w-4 h-4 text-orange-500 accent-orange-500"
+                       onclick="ubahLink('btn-canva', 'https://shope.ee', 'https://tokopedia.link', '')">
+                <div>
+                  <span class="block font-bold text-sm text-gray-800">Akses 1 Tahun Full</span>
+                  <span class="block text-xs text-gray-400">Lebih hemat, anti ganti tim</span>
+                </div>
+              </div>
+              <span class="font-extrabold text-blue-900 text-sm">Rp95.000</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="p-6 bg-gray-50 border-t border-gray-100 rounded-b-2xl">
+          <div class="flex flex-col gap-3" id="btn-canva">
+            <div class="relative group">
+              <span class="absolute -top-2 -right-2 z-10 bg-cyan-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded shadow flex items-center gap-0.5 animate-pulse">🚚 OTOMATIS Rp0 ONG KIRS</span>
+              <a href="https://shope.ee" target="_blank" class="platform-shopee w-full flex items-center justify-between bg-[#EE4D2D] hover:bg-[#f05d3e] text-white font-bold py-3 px-4 rounded-xl text-sm transition shadow-sm">
+                <span>Beli via Shopee</span> <span class="opacity-80">➔</span>
+              </a>
+            </div>
+            <div class="relative">
+              <span class="absolute -top-2 -right-2 z-10 bg-green-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded shadow flex items-center gap-0.5">🟢 Rp0 ONGKIR</span>
